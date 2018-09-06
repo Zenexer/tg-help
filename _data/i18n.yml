@@ -20,6 +20,9 @@ langs:
   - key: id
     name: Indonesian
     localized: Bahasa Indonesia
+  - key: bg
+    name: Bulgarian
+    localized: български език
 faqs:
   - key: crypt
     question:
@@ -30,6 +33,7 @@ faqs:
       pt: "Como eu faço saque de dinheiro?"
       es: "Como retiro el dinero?"
       id: "Bagaimana cara saya menarik uang?"
+      bg: "Как мога да изтегля пари?"
     answer:
       en: "You can't earn free money on Telegram. Telegram isn't a cryptocurrency program. You can't withdraw money. If a bot claims to give you free money, then it is a scam."
       hi: "(Hindi answer)"
@@ -38,3 +42,4 @@ faqs:
       pt: "Você não conseguirá ganhar dinheiro de graça no Telegram. O Telegram não é um aplicativo de criptomoedas. Você não pode sacar dinheiro. Se um bot diz que irá te dar dinheiro de graça"
       es: "No puedes ganar dinero gratis en Telegram. Telegram no es un programa de criptomonedas. No puedes retirar dinero. Si un bot asegura darte dinero gratis, es una estafa."
       id: "Anda tidak dapat memperoleh uang gratis di Telegram. Telegram bukanlah program mata uang digital (cryptocurrency). Anda tidak dapat menambang maupun menarik uang. Jika ada bot yang mengklaim bisa memberi Anda uang gratis, maka itu adalah penipuan."
+      bg: "Telegram не е платформа която предлага пари. Telegram не е софтуер за криптовалути. Не можеш да изтеглиш пари. Ако бот предлага парична стойност, това е измама."

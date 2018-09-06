@@ -14,17 +14,23 @@
 				continue;
 			}
 
-			lang = lang.toLowerCase();
-			lang = lang.replace(/_/g, '-');
-			
-			if (supportedLanguages.indexOf(lang) >= 0) {
-				roots.push(lang);
-			} else {
-				var tok = lang.split('-');
-				lang = tok[0].toLowerCase();
-				
-				if (supportedLanguages.indexOf(lang) >= 0) {
-					roots.push(lang);
+			var tok = lang.split(/[-_]/);
+			var dialects = [];
+
+			tok[0] = tok[0].toLowerCase();
+
+			if (tok.length > 1) {
+				tok[1] = tok[1].toUpperCase();
+				dialects.push(tok[0] + '-' + tok[1]);
+			}
+
+			dialects.push(tok[0]);
+
+			for (var d in dialects) {
+				var dialect = dialects[d];
+
+				if (supportedLanguages.indexOf(dialect) >= 0) {
+					roots.push(dialect);
 				}
 			}
 		}

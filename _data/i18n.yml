@@ -14,7 +14,7 @@ langs:
   - key: pt
     name: Portuguese
     localized: Português
-  - key: es
+  - key: es  # es-ES
     name: Spanish
     localized: Español
   - key: es-AR

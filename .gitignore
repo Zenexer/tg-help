@@ -23,3 +23,6 @@ _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
+
+# While most repos should have this committed, we always want to be on the latest, since that's what GitHub Pages is using
+Gemfile.lock

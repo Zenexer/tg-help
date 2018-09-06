@@ -1,39 +1,26 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Telegram Help</title>
-	<link rel="stylesheet" href="css/index.css">
-</head>
-<body>
-	<script>
-		(function() {
-			"use strict";
-			window.i18n = {
-				supportedLanguages: ['en', 'hi', 'de', 'it', 'pt'],
-				faqs: [
-					{
-						key: "crypto",
-						question: {
-							en: "How do I withdraw money?",
-							hi: "(Hindi question)",
-							de: "Wie kann ich Geld abheben?",
-							it: "Come posso prelevare i miei soldi?",
-							pt: "Como eu faço saque de dinheiro?",
-						},
-						answer: {
-							en: "You can't earn free money on Telegram. Telegram isn't a cryptocurrency program. You can't withdraw money. If a bot claims to give you free money, then it is a scam.",
-							hi: "(Hindi answer)",
-							de: "Du wirst kein Geld umsonst in Telegram bekommen. Telegram ist kein Kryptowährungsprogramm. Du kannst kein Geld abheben. Wenn ein Bot dir Geld umsonst anbietet, ist es ein Betrug.",
-							it: "Non puoi guadagnare soldi gratis su Telegram. Telegram non è un wallet di criptomonete. Non puoi prelevare soldi via Telegram, e se un bot offre soldi gratis è probabilmente uno scam.",
-							pt: "Você não conseguirá ganhar dinheiro de graça no Telegram. O Telegram não é um aplicativo de criptomoedas. Você não pode sacar dinheiro. Se um bot diz que irá de dar dinheiro de graça, não acredite. É fraude.",
-						}
-					},
-				],
-			};
-		})();
-	</script>
-	<script src="js/index.js"></script>
-	<noscript>This page requires JavaScript.</noscript>
-</body>
-</html>
+---
+layout: faq
+title: Telegram Help
+---
+
+<hr id="pref-sep">
+{% for lang in site.data.i18n.langs %}
+	<div id="{{ lang.key }}" class="lang">
+		<h1>
+			<span class="lang-localized">{{ lang.localized }}</span>
+			{% if lang.localized != lang.name %}
+				<span class="lang-name">({{ lang.name }})</span>
+			{% endif %}
+			<a class="permalink" href="#{{ lang.key }}">#{{ lang.key }}</a>
+		</h1>
+		<dl class="faq-list">
+			{% for faq in site.data.i18n.faqs %}
+				<dt id="{{ faq.key }}-{{ lang.key }}" class="question">
+					<span class="question-text">{{ faq.question[lang.key] }}</span>
+					<a class="permalink" href="#{{ faq.key }}-{{ lang.key }}">#{{ faq.key }}-{{ lang.key }}</a>
+				</dt>
+				<dd class="answer">{{ faq.answer[lang.key] }}</dd>
+			{% endfor %}
+		</dl>
+	</div>
+{% endfor %}

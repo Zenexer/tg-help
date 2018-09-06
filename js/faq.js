@@ -19,9 +19,19 @@
 
 			tok[0] = tok[0].toLowerCase();
 
-			if (tok.length > 1) {
-				tok[1] = tok[1].toUpperCase();
-				dialects.push(tok[0] + '-' + tok[1]);
+			switch (tok.length) {
+				case 2:
+					tok[1] = tok[1].toUpperCase();
+					dialects.push(tok[0] + '-' + tok[1]);
+					break;
+
+				case 3:
+					tok[1] = tok[1].length === 0 ? '' : tok[1][0].toUpperCase() + tok[1].substr(1).toLowerCase();
+					tok[2] = tok[2].toUpperCase();
+					dialects.push(tok[0] + '-' + tok[1] + '-' + tok[2]);
+					dialects.push(tok[0] + '-' + tok[1]);
+					dialects.push(tok[0] + '-' + tok[2]);
+					break;
 			}
 
 			dialects.push(tok[0]);

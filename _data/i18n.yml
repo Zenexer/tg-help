@@ -2,9 +2,12 @@ langs:
   - key: en
     name: English
     localized: English
-  - key: hi
-    name: Hindi
+  - key: hi  # hi-Deva
+    name: Hindi - Devanagari script
     localized: हिन्दी
+  - key: hi-Latn
+    name: Hindi - Latin script
+    localized: Hinglish
   - key: de
     name: German
     localized: Deutsch
@@ -30,7 +33,8 @@ faqs:
   - key: crypt
     question:
       en: "How do I withdraw money?"
-      hi: "(Hindi question)"
+      hi: "मैं पैसे कैसे निकाल सकता हूं?"
+      hi-Latn: "mai paise kaise nikalu?"
       de: "Wie kann ich Geld abheben?"
       it: "Come posso prelevare denaro?"
       pt: "Como eu faço saque de dinheiro?"
@@ -40,7 +44,8 @@ faqs:
       bg: "Как мога да изтегля пари?"
     answer:
       en: "You can't earn free money on Telegram. Telegram isn't a cryptocurrency program. You can't withdraw money. If a bot claims to give you free money, then it is a scam."
-      hi: "(Hindi answer)"
+      hi: "आप टेलीग्राम पर मुफ्त में पैसे नहीं कमा सकते। वह एक संदेश सेवा है। अगर कोई बॉट आपको मुफ्त में पैसे देने का दावा करता है तो वह सही नहीं है।"
+      hi-Latn: "aap muft me paisa nhi kma skte telegram se. telegram koi Cryptocurrency program nhi hai. aap paise nikal nhi skte. agar koi bot bolta hai ki woh apko paise dega, toh woh dhoka hai."
       de: "Du wirst kein Geld umsonst in Telegram bekommen. Telegram ist kein Kryptowährungsprogramm. Du kannst kein Geld abheben. Wenn ein Bot dir Geld umsonst anbietet, ist es ein Betrug."
       it: "Non puoi guadagnare monete gratis su Telegram. Telegram non è un programma di criptovaluta. Non puoi prelevare monete. Se un bot dice che ti darà monete gratuite, è una truffa."
       pt: "Você não conseguirá ganhar dinheiro de graça no Telegram. O Telegram não é um aplicativo de criptomoedas. Você não pode sacar dinheiro. Se um bot diz que irá te dar dinheiro de graça."

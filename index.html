@@ -14,9 +14,9 @@ title: Telegram Help
 		</h1>
 		<dl class="faq-list">
 			{% for faq in site.data.i18n.faqs %}
-				<dt id="{{ faq.key }}-{{ lang.key }}" class="question">
+				<dt id="{{ faq.key }}--{{ lang.key }}" class="question">
 					<span class="question-text">{{ faq.question[lang.key] }}</span>
-					<a class="permalink" href="#{{ faq.key }}-{{ lang.key }}">#{{ faq.key }}-{{ lang.key }}</a>
+					<a class="permalink" href="#{{ faq.key }}--{{ lang.key }}">#{{ faq.key }}--{{ lang.key }}</a>
 				</dt>
 				<dd class="answer">{{ faq.answer[lang.key] }}</dd>
 			{% endfor %}

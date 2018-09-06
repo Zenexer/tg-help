@@ -13,12 +13,19 @@
 			if (lang === null || lang === undefined || lang === '') {
 				continue;
 			}
-			
-			var tok = lang.split(/[-_]/);
-			lang = tok[0].toLowerCase();
+
+			lang = lang.toLowerCase();
+			lang = lang.replace(/_/g, '-');
 			
 			if (supportedLanguages.indexOf(lang) >= 0) {
 				roots.push(lang);
+			} else {
+				var tok = lang.split('-');
+				lang = tok[0].toLowerCase();
+				
+				if (supportedLanguages.indexOf(lang) >= 0) {
+					roots.push(lang);
+				}
 			}
 		}
 		
@@ -43,7 +50,7 @@
 				hash = hash.substr(1);
 			}
 
-			var tok = hash.split('-');
+			var tok = hash.split('--');
 			hash = tok[tok.length - 1];
 			hash = hash.toLowerCase();
 

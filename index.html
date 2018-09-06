@@ -4,7 +4,7 @@ title: Telegram Help
 ---
 <hr id="pref-sep">
 {% for lang in site.data.i18n.langs %}
-	<div id="{{ lang.key }}" class="lang">
+	<div id="{{ lang.key }}" class="lang" lang="{{ lang.key }}">
 		<h1>
 			<span class="lang-localized">{{ lang.localized }}</span>
 			{% if lang.localized != lang.name %}

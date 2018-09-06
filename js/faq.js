@@ -68,7 +68,6 @@
 
 			var tok = hash.split('--');
 			hash = tok[tok.length - 1];
-			hash = hash.toLowerCase();
 
 			if (supportedLanguages.indexOf(hash) >= 0) {
 				langs.unshift(hash);

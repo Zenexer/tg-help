@@ -29,21 +29,24 @@ langs:
   - key: bg
     name: Bulgarian
     localized: български език
-  - key: so
-    name: Somali
-    localized: TODO
-  - key: sw
-    name: Swahili
-    localized: TODO
-  - key: ti
-    name: Tigrinya
-    localized: TODO
-  - key: ms
-    name: Malay
-    localized: TODO
-  - key: ml
-    name: Malayalam
-    localized: TODO
+  - key: ta
+    name: Tamil
+    localized: தமிழ்
+  #- key: so
+  #  name: Somali
+  #  localized: TODO
+  #- key: sw
+  #  name: Swahili
+  #  localized: TODO
+  #- key: ti
+  #  name: Tigrinya
+  #  localized: TODO
+  #- key: ms
+  #  name: Malay
+  #  localized: TODO
+  #- key: ml
+  #  name: Malayalam
+  #  localized: TODO
 faqs:
   - key: crypt
     question:
@@ -57,6 +60,8 @@ faqs:
       es-AR: "Como retiro el dinero?"
       id: "Bagaimana cara saya menarik uang?"
       bg: "Как мога да изтегля пари?"
+      ta: "நான் பணத்தை மீளப்பெறுவது எப்படி?"
+
     answer:
       en: "You can't earn free money on Telegram. Telegram isn't a cryptocurrency program. You can't withdraw money. If a bot claims to give you free money, then it is a scam."
       hi: "आप टेलीग्राम पर मुफ्त में पैसे नहीं कमा सकते। वह एक संदेश सेवा है। अगर कोई बॉट आपको मुफ्त में पैसे देने का दावा करता है तो वह सही नहीं है।"
@@ -68,3 +73,4 @@ faqs:
       es-AR: "No puedes ganar dinero gratis en Telegram. Telegram no es un programa de criptomonedas. No puedes retirar dinero. Si un bot asegura darte dinero gratis, es una estafa."
       id: "Anda tidak dapat memperoleh uang gratis di Telegram. Telegram bukanlah program mata uang digital (cryptocurrency). Anda tidak dapat menambang maupun menarik uang. Jika ada bot yang mengklaim bisa memberi Anda uang gratis, maka itu adalah penipuan."
       bg: "Telegram не е платформа която предлага пари. Telegram не е софтуер за криптовалути. Не можеш да изтеглиш пари. Ако бот предлага парична стойност, това е измама."
+      ta: "உங்களால் டெலிகிராமில் இலவசமாகப் பணம் உழைக்க முடியாது. டெலிகிராம் என்பது ஒரு கிரிப்டோகரன்சி நிகழ்ச்சி அல்ல. உங்களால் பணத்தை மீளப் பெற முடியாது. ரோபோ ஒன்று உங்களுக்கு இலவசமாகப் பணம் தருவதாகக் கூறினால், அது ஒரு ஏமாற்று வேலையாகும்."

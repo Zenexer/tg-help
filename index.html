@@ -2,24 +2,34 @@
 layout: faq
 title: Telegram Help
 ---
-<hr id="pref-sep">
-{% for lang in site.data.i18n.langs %}
-	<div id="{{ lang.key }}" class="lang" lang="{{ lang.key }}">
-		<h1>
-			<span class="lang-localized">{{ lang.localized }}</span>
-			{% if lang.localized != lang.name %}
-				<span class="lang-name">({{ lang.name }})</span>
-			{% endif %}
-			<a class="permalink" href="#{{ lang.key }}">#{{ lang.key }}</a>
-		</h1>
-		<dl class="faq-list">
-			{% for faq in site.data.i18n.faqs %}
-				<dt id="{{ faq.key }}--{{ lang.key }}" class="question">
-					<span class="question-text">{{ faq.question[lang.key] }}</span>
-					<a class="permalink" href="#{{ faq.key }}--{{ lang.key }}">#{{ faq.key }}--{{ lang.key }}</a>
-				</dt>
-				<dd class="answer">{{ faq.answer[lang.key] }}</dd>
+<div id="questions">
+	<div id="lang-list">
+		<h1>Languages</h1>
+		<ul>
+			{% for lang in site.data.i18n.langs %}
+				<li><a href="#{{ lang.key }}">{{ lang.localized }} ({{ lang.name }})</a></li>
 			{% endfor %}
-		</dl>
+		</ul>
 	</div>
-{% endfor %}
+
+	{% for lang in site.data.i18n.langs %}
+		<div id="{{ lang.key }}" class="lang" lang="{{ lang.key }}">
+			<h1>
+				<span class="lang-localized">{{ lang.localized }}</span>
+				{% if lang.localized != lang.name %}
+					<span class="lang-name">({{ lang.name }})</span>
+				{% endif %}
+				<a class="permalink" href="#{{ lang.key }}">#{{ lang.key }}</a>
+			</h1>
+			<dl class="faq-list">
+				{% for faq in site.data.i18n.faqs %}
+					<dt id="{{ faq.key }}--{{ lang.key }}" class="question">
+						<span class="question-text">{{ faq.question[lang.key] }}</span>
+						<a class="permalink" href="#{{ faq.key }}--{{ lang.key }}">#{{ faq.key }}--{{ lang.key }}</a>
+					</dt>
+					<dd class="answer">{{ faq.answer[lang.key] }}</dd>
+				{% endfor %}
+			</dl>
+		</div>
+	{% endfor %}
+</div>

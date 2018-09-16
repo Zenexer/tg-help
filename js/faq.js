@@ -88,10 +88,10 @@
 
 	function update() {
 		var document = window.document;
-		var parent = document.body;
+		var parent = document.getElementById('questions');
 		var i;
 
-		var separator = document.getElementById('pref-sep');
+		var separator = document.getElementById('lang-list');
 		var langDivs = document.getElementsByClassName('lang');
 
 		supportedLanguages = [];

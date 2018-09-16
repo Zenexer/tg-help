@@ -38,14 +38,27 @@ a.permalink {
 		color: #777;
 	}
 
-#pref-sep {
+#lang-list {
 	border: none;
 	border-top: 1px solid #ddd;
-	display: none;
+	border-bottom: 1px solid #ddd;
 	margin: 2em 0;
+	padding: 2em 0;
 }
-	#pref-sep:not(:first-child) {
-		display: block;
+	#lang-list:first-child {
+		border-top: none;
+	}
+	#lang-list:last-child {
+		border-bottom: none;
+	}
+
+	#lang-list ul {
+		margin: 2em 0 1em;
+	}
+
+	#lang-list h1 {
+		margin: 0;
+		padding: 0;
 	}
 
 .highlighted,

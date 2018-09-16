@@ -29,6 +29,21 @@ langs:
   - key: bg
     name: Bulgarian
     localized: български език
+  - key: so
+    name: Somali
+    localized: TODO
+  - key: sw
+    name: Swahili
+    localized: TODO
+  - key: ti
+    name: Tigrinya
+    localized: TODO
+  - key: ms
+    name: Malay
+    localized: TODO
+  - key: ml
+    name: Malayalam
+    localized: TODO
 faqs:
   - key: crypt
     question:

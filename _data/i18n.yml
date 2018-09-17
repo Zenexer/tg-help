@@ -2,71 +2,106 @@ langs:
   - key: en
     name: English
     localized: English
+    dir: ltr
+    authored: https://t.me/Zenexer
+    signed-off: https://t.me/Zenexer
   # Not yet received from translator
   #- key: so
   #  name: Somali
-  #  localized: TODO
+  #  localized: Af-Soomaali
+  #  dir: ltr
+  #  authored: stepes:130361849ENSO1
   # Translator sent the wrong file
   #- key: sw
   #  name: Swahili
-  #  localized: TODO
+  #  localized: Kiswahili
+  #  dir: ltr
+  #  authored: stepes:130361849ENSW1
   # File received from translator is corrupt.  UTF-16BE, but missing arbitrary bytes, along with random insertions of bytes.
   #- key: am
   #  name: Amharic
   #  localized: አማርኛ
+  #  dir: ltr
+  #  authored: stepes:130361849ENAM1
   - key: he
     name: Hebrew
     localized: עִבְרִית
+    dir: rtl
+    authored: stepes:130361849ENIW1
   - key: hi  # hi-Deva
     name: Hindi - Devanagari script
     localized: हिन्दी
+    dir: ltr
   - key: hi-Latn
     name: Hindi - Latin script
     localized: Hinglish
+    dir: ltr
   - key: de
     name: German
     localized: Deutsch
+    dir: ltr
   - key: it
     name: Italian
     localized: Italiano
+    dir: ltr
   - key: pt
     name: Portuguese
     localized: Português
+    dir: ltr
   - key: es  # es-ES
     name: Spanish
     localized: Español
+    dir: ltr
   - key: es-AR
     name: Spanish - Rioplatense
     localized: Castellano Rioplatense
+    dir: ltr
   - key: id
     name: Indonesian
     localized: Bahasa Indonesia
+    dir: ltr
   - key: ms
     name: Malay
     localized: Bahasa Melayu
+    dir: ltr
+    authored: stepes:130361849ENMS1
   - key: ml
     name: Malayalam
     localized: മലയാളം
+    dir: ltr
+    authored: stepes:130361849ENML1
   - key: ta
     name: Tamil
     localized: தமிழ்
+    dir: ltr
+    authored: stepes:130361849ENTA1
   - key: ar
     name: Arabic
     localized: العَرَبِيَّة
+    dir: rtl
+    authored: stepes:130361849ENAR1
+    signed-off: https://t.me/PublicTestGroup/1968391
   - key: ur
     name: Urdu
     localized: اُردُو‬
+    dir: rtl
+    authored: stepes:130361849ENUR1
   # Needs confirmation (see comment on answer)
   #- key: te
   #  name: Telugu
   #  localized: తెలుగు
+  #  dir: ltr
+  #  authored: stepes:130361849ENTE1
   # Not yet assigned to a translator
   #- key: ti
   #  name: Tigrinya
-  #  localized: TODO
+  #  localized: ትግርኛ
+  #  dir: ltr
+  #  authored: stepes:130361849ENTI1
   - key: bg
     name: Bulgarian
     localized: български език
+    dir: ltr
 faqs:
   - key: crypt
     question:

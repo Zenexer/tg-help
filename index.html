@@ -7,7 +7,7 @@ title: Telegram Help
 		<h1>Languages</h1>
 		<ul>
 			{% for lang in site.data.i18n.langs %}
-				<li><a href="#{{ lang.key }}">{{ lang.localized }} ({{ lang.name }})</a></li>
+				<li><a href="#{{ lang.key }}" class="lang-localized"><bdo dir="{{ lang.dir }}">{{ lang.localized }}</bdo> <span class="lang-name">({{ lang.name }})</span></a></li>
 			{% endfor %}
 		</ul>
 	</div>
@@ -15,17 +15,17 @@ title: Telegram Help
 	{% for lang in site.data.i18n.langs %}
 		<div id="{{ lang.key }}" class="lang" lang="{{ lang.key }}">
 			<h1>
-				<span class="lang-localized">{{ lang.localized }}</span>
+				<span class="lang-localized" dir="{{ lang.dir }}">{{ lang.localized }}</span>
 				{% if lang.localized != lang.name %}
-					<span class="lang-name">({{ lang.name }})</span>
+					<span class="lang-name" dir="ltr">({{ lang.name }})</span>
 				{% endif %}
-				<a class="permalink" href="#{{ lang.key }}">#{{ lang.key }}</a>
+				<a class="permalink" href="#{{ lang.key }}">#<bdo dir="ltr">{{ lang.key }}</bdo></a>
 			</h1>
-			<dl class="faq-list">
+			<dl class="faq-list" dir="{{ lang.dir }}">
 				{% for faq in site.data.i18n.faqs %}
 					<dt id="{{ faq.key }}--{{ lang.key }}" class="question">
 						<span class="question-text">{{ faq.question[lang.key] }}</span>
-						<a class="permalink" href="#{{ faq.key }}--{{ lang.key }}">#{{ faq.key }}--{{ lang.key }}</a>
+						<a class="permalink" href="#{{ faq.key }}--{{ lang.key }}">#<bdo dir="ltr">{{ faq.key }}--{{ lang.key }}</bdo></a>
 					</dt>
 					<dd class="answer">{{ faq.answer[lang.key] }}</dd>
 				{% endfor %}

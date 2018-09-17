@@ -16,7 +16,7 @@ dl {
 	margin: 0;
 }
 dt, dd, p, h1 {
-	padding: 6pt;
+	padding: .5em;
 	margin: 0;
 }
 
@@ -30,7 +30,7 @@ h1 { font-size: 1.6em; }
 a.permalink {
 	text-decoration: none;
 	color: #ddd;
-	padding-left: .6em;
+	padding: 0 .6em;
 }
 	a.permalink:hover,
 	a.permalink:active,
@@ -42,7 +42,7 @@ a.permalink {
 	border: none;
 	border-top: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
-	margin: 2em 0;
+	margin: 1.5em 0 2em;
 	padding: 2em 0;
 }
 	#lang-list:first-child {
@@ -53,13 +53,18 @@ a.permalink {
 	}
 
 	#lang-list ul {
-		margin: 2em 0 1em;
+		margin: 1.2em 0 0 0;
+		padding: 0 0 0 2.5em;
 	}
 
 	#lang-list h1 {
 		margin: 0;
 		padding: 0;
 	}
+
+#lang-list + .lang h1 {
+	padding-top: 0;
+}
 
 .highlighted,
 .question.highlighted + .answer {

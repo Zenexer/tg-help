@@ -11,12 +11,11 @@ langs:
   #  localized: Af-Soomaali
   #  dir: ltr
   #  authored: stepes:130361849ENSO1
-  # Translator sent the wrong file
-  #- key: sw
-  #  name: Swahili
-  #  localized: Kiswahili
-  #  dir: ltr
-  #  authored: stepes:130361849ENSW1
+  - key: sw
+    name: Swahili
+    localized: Kiswahili
+    dir: ltr
+    authored: stepes:130361849ENSW1
   # File received from translator is corrupt.  UTF-16BE, but missing arbitrary bytes, along with random insertions of bytes.
   #- key: am
   #  name: Amharic
@@ -36,6 +35,15 @@ langs:
     name: Hindi - Latin script
     localized: Hinglish
     dir: ltr
+    authored:
+      - time: 2018-09-05T03:49:35Z
+        by: https://t.me/daddytimelord
+        link: https://t.me/pc_chat/663268
+    signed-off:
+      - time: 2018-09-05T03:59:41Z
+        by: https://t.me/daddytimelord
+        link: https://t.me/pc_chat/663307
+        quote: "yea that's good hinglish keep that"
   - key: de
     name: German
     localized: Deutsch
@@ -134,6 +142,7 @@ faqs:
       ml: "എനിക്ക് എങ്ങനെ പണം പിന്‍വലിക്കാനാവും?"
       he: "כיצד אני מושך/ת כסף?"
       te: "నేను నగదుని ఎలా విత్‌డ్రా చేయాలి?"
+      sw: "Nitatoa vipi pesa?"
 
     answer:
       en: "You can't earn free money on Telegram. Telegram isn't a cryptocurrency program. You can't withdraw money. If a bot claims to give you free money, then it is a scam."
@@ -153,3 +162,4 @@ faqs:
       ml: "നിങ്ങള്‍ക്ക് Telegram-ല്‍ സൗജന്യമായി പണം സമ്പാദിക്കാനാവില്ല. Telegram ഒരു ക്രിപ്റ്റോകറന്‍സി പ്രോഗ്രാം അല്ല. അതില്‍ നിങ്ങള്‍ക്ക് പണം പിന്‍വലിക്കാന്‍ സാധിക്കില്ല. ഒരു ബോട്ട് നിങ്ങള്‍ക്ക് പണം സൗജന്യമായി നല്‍കാമെന്ന് വാഗ്ദാനം ചെയ്താല്‍ അത് കബളിപ്പിക്കലായിരിക്കും."
       he: "אינך יכול/ה להרוויח כסף בחינם בטלגרם. טלגרם היא אינה תוכנת מטבע מבוזר (מטבע וירטואלי). אינך יכול/ה למשוך כסף. במידה ובוט  (חשבון אוטומטי) מציע לך כסף בחינם, זו תרמית."
       te: "మీరు టెలిగ్రామ్‌లో ఉచిత నగదుని ఆర్జించలేరు. టెలిగ్రామ్ ఒక క్రిప్టోకరెన్సీ ప్రోగ్రామ్ కాదు. మీరు నగదుని విత్‌డ్రా చేయలేరు. ఒకవేళ మీకు ఉచిత నగదు ఇవ్వాలని ఒక బోట్ అంటే, అప్పుడు అది ఒక స్కామ్ అవుతుంది."
+      sw: "Huwezi kupata pesa za bwerere kupitia kwa Telegram. Telegram sio programu ya sarafu za mtandaoni. Huwezi kutoa pesa. Iwapo roboti ya kiteknolojia inadai kukupatia pesa za bwerere, bila shaka huo utakuwa ni ulaghai."

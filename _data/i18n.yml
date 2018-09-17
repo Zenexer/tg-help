@@ -14,9 +14,9 @@ langs:
   #- key: am
   #  name: Amharic
   #  localized: አማርኛ
-  - key: iw
+  - key: he
     name: Hebrew
-    localized:
+    localized: עִבְרִית
   - key: hi  # hi-Deva
     name: Hindi - Devanagari script
     localized: हिन्दी
@@ -85,7 +85,7 @@ faqs:
       ur: "میں رقم کیسے نکال سکتا ہوں؟"
       ms: "Bagaimana saya membuat pengeluaran wang?"
       ml: "എനിക്ക് എങ്ങനെ പണം പിന്‍വലിക്കാനാവും?"
-      iw: "כיצד אני מושך/ת כסף?"
+      he: "כיצד אני מושך/ת כסף?"
       #te: "నేను నగదుని ఎలా విత్‌డ్రా చేయాలి?"
 
     answer:
@@ -104,6 +104,6 @@ faqs:
       ur: "آپ ٹیلیگرام پر مفت پیسے نہیں کما سکتے۔ ٹیلیگرام کوئی کرپٹو کرنسی پروگرام نہیں ہے۔ آپ رقم نہیں نکال سکتے۔ اگر کسی باٹ نے آپ کو مفت پیسے دینے کی بات کی ہو، تو یہ کھلی دھوکا بازی ہے۔"
       ms: "Anda tidak dapat memperolehi wang percuma melalui Telegram. Telegram bukanlah sebuah perisian mata wang kripto. Anda tidak dapat membuat pengeluaran wang. Jika terdapat bot yang membuat tuntutan akan memberikan wang percuma, ia adalah penipuan (scam)."
       ml: "നിങ്ങള്‍ക്ക് Telegram-ല്‍ സൗജന്യമായി പണം സമ്പാദിക്കാനാവില്ല. Telegram ഒരു ക്രിപ്റ്റോകറന്‍സി പ്രോഗ്രാം അല്ല. അതില്‍ നിങ്ങള്‍ക്ക് പണം പിന്‍വലിക്കാന്‍ സാധിക്കില്ല. ഒരു ബോട്ട് നിങ്ങള്‍ക്ക് പണം സൗജന്യമായി നല്‍കാമെന്ന് വാഗ്ദാനം ചെയ്താല്‍ അത് കബളിപ്പിക്കലായിരിക്കും."
-      iw: "אינך יכול/ה להרוויח כסף בחינם בטלגרם. טלגרם היא אינה תוכנת מטבע מבוזר (מטבע וירטואלי). אינך יכול/ה למשוך כסף. במידה ובוט  (חשבון אוטומטי) מציע לך כסף בחינם, זו תרמית."
+      he: "אינך יכול/ה להרוויח כסף בחינם בטלגרם. טלגרם היא אינה תוכנת מטבע מבוזר (מטבע וירטואלי). אינך יכול/ה למשוך כסף. במידה ובוט  (חשבון אוטומטי) מציע לך כסף בחינם, זו תרמית."
       # This might say "Telegram IS a cryptocurrency program" instead of "is NOT a cryptocurrency program"; need to confirm
       #te: "మీరు టెలిగ్రామ్‌లో ఉచిత నగదుని ఆర్జించలేరు. టెలిగ్రామ్ ఒక క్రిప్టోకరెన్సీ ప్రోగ్రామ్. మీరు నగదుని విత్‌డ్రా చేయలేరు. ఒకవేళ మీకు ఉచిత నగదు ఇవ్వాలని ఒక బోట్ అంటే, అప్పుడు అది ఒక స్కామ్ అవుతుంది."

@@ -75,7 +75,15 @@ langs:
     localized: தமிழ்
     dir: ltr
     authored: stepes:130361849ENTA1
-    signed-off: https://t.me/PublicTestGroup/1968910
+    signed-off:
+      - time: 2018-09-17T04:42:47Z
+        by: https://t.me/darkmagic1an
+        via: https://t.me/skollwolf
+        quote: "Wow yeah , it’s fine"
+      - time: 2018-09-17T04:53:46Z
+        by: https://t.me/peppermutton
+        via: https://t.me/skollwolf
+        quote: "thats really accurate"
   - key: ar
     name: Arabic
     localized: العَرَبِيَّة
@@ -87,7 +95,6 @@ langs:
     localized: اُردُو‬
     dir: rtl
     authored: stepes:130361849ENUR1
-   Needs confirmation (see comment on answer)
   - key: te
     name: Telugu
     localized: తెలుగు

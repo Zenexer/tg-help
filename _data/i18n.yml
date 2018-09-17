@@ -5,12 +5,11 @@ langs:
     dir: ltr
     authored: https://t.me/Zenexer
     signed-off: https://t.me/Zenexer
-  # Not yet received from translator
-  #- key: so
-  #  name: Somali
-  #  localized: Af-Soomaali
-  #  dir: ltr
-  #  authored: stepes:130361849ENSO1
+  - key: so
+    name: Somali
+    localized: Af-Soomaali
+    dir: ltr
+    authored: stepes:130361849ENSO1
   - key: sw
     name: Swahili
     localized: Kiswahili
@@ -143,6 +142,7 @@ faqs:
       he: "כיצד אני מושך/ת כסף?"
       te: "నేను నగదుని ఎలా విత్‌డ్రా చేయాలి?"
       sw: "Nitatoa vipi pesa?"
+      so: "Sidee baan uga bixi karaa lacagtayda?"
 
     answer:
       en: "You can't earn free money on Telegram. Telegram isn't a cryptocurrency program. You can't withdraw money. If a bot claims to give you free money, then it is a scam."
@@ -163,3 +163,4 @@ faqs:
       he: "אינך יכול/ה להרוויח כסף בחינם בטלגרם. טלגרם היא אינה תוכנת מטבע מבוזר (מטבע וירטואלי). אינך יכול/ה למשוך כסף. במידה ובוט  (חשבון אוטומטי) מציע לך כסף בחינם, זו תרמית."
       te: "మీరు టెలిగ్రామ్‌లో ఉచిత నగదుని ఆర్జించలేరు. టెలిగ్రామ్ ఒక క్రిప్టోకరెన్సీ ప్రోగ్రామ్ కాదు. మీరు నగదుని విత్‌డ్రా చేయలేరు. ఒకవేళ మీకు ఉచిత నగదు ఇవ్వాలని ఒక బోట్ అంటే, అప్పుడు అది ఒక స్కామ్ అవుతుంది."
       sw: "Huwezi kupata pesa za bwerere kupitia kwa Telegram. Telegram sio programu ya sarafu za mtandaoni. Huwezi kutoa pesa. Iwapo roboti ya kiteknolojia inadai kukupatia pesa za bwerere, bila shaka huo utakuwa ni ulaghai."
+      so: "Waxaad ma heli karo lacag la'aan ah telegraam. Telegram ma aha barnaamijka cryptocurrency. Lama qaadan kartid lacag. Haddii mashiinku sheeganayo inuu ku siinayo lacag lacag la'aan ah, ka dibna waa beenaal been ah."

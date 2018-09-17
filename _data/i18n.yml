@@ -89,7 +89,11 @@ langs:
     localized: العَرَبِيَّة
     dir: rtl
     authored: stepes:130361849ENAR1
-    signed-off: https://t.me/PublicTestGroup/1968391
+    signed-off:
+      - time: 2018-09-17T02:21:07Z
+        by: https://t.me/TheNewShadow
+        link: https://t.me/PublicTestGroup/1968391
+        quote: "actually, it's well translated, make sense, not literall and you can approve/Publish it."
   - key: ur
     name: Urdu
     localized: اُردُو‬

@@ -120,6 +120,14 @@ langs:
     name: Bulgarian
     localized: български език
     dir: ltr
+  - key: lt
+    name: Lithuanian
+    localized: Lietuvių
+    dir: ??
+  - key: no
+    name: Norwegian
+    localized: Norsk
+    dir: ??
 faqs:
   - key: crypt
     question:
@@ -143,6 +151,8 @@ faqs:
       sw: "Nitatoa vipi pesa?"
       so: "Sidee baan uga bixi karaa lacagtayda?"
       am: "ገንዘብ እንዴት አወጣለሁ?"
+      lt: "Kaip man išimti pinigus?"
+      no: "Hvordan trekker jeg ut penger?"
 
     answer:
       en: "You can't earn free money on Telegram. Telegram isn't a cryptocurrency program. You can't withdraw money. If a bot claims to give you free money, then it is a scam."
@@ -165,3 +175,5 @@ faqs:
       sw: "Huwezi kupata pesa za bwerere kupitia kwa Telegram. Telegram sio programu ya sarafu za mtandaoni. Huwezi kutoa pesa. Iwapo roboti ya kiteknolojia inadai kukupatia pesa za bwerere, bila shaka huo utakuwa ni ulaghai."
       so: "Waxaad ma heli karo lacag la'aan ah telegraam. Telegram ma aha barnaamijka cryptocurrency. Lama qaadan kartid lacag. Haddii mashiinku sheeganayo inuu ku siinayo lacag lacag la'aan ah, ka dibna waa beenaal been ah."
       am: "ቴሌግራም ላይ ነጻ ገንዘብ ማግኘት አይችሉም። ቴሌግራም አህዛዊ የገንዘብ ምስጠራ መርሃግብር አይደለም። ገንዘብ ማውጣት አይችሉም። የኮምፕዩተር መርሃግብር ነጻ ገንዘብ እንደሚሰጥዎ ካረጋገጠ፣ ይህ ማጭበርበር ነው።"
+      lt: "Jūs negalite uždirbti pinigų per Telegram. Telegram nėra kriptovalutos programa. Jūs negalite išimti pinigų. Jei botas teigia, kad jums suteiks nemokamus pinigus, tai yra apgaulė."
+      no: "Du kan ikke tjene gratis penger på Telegram. Telegram er ikke et cryptocurrency program. Du kan ikke trekke ut penger. Hvis en bot hevder å gi deg gratis penger, så er det en svindel."

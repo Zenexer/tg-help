@@ -1,0 +1,17 @@
+body {
+    font-size: 14pt;
+    font-family: sans-serif;
+}
+
+details > div  {
+    margin: .5em 1.2em;
+}
+
+details > details {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+main > details > div {
+    margin-bottom: 1em;
+}

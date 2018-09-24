@@ -1,4 +1,3 @@
-
 (function() {
 	"use strict";
 
@@ -9,7 +8,7 @@
 
 	function init() {
 		// Prevent annoying flicker/jump if we're able to avoid it
-		if (window.history.replaceState) {
+		if (window.history && window.history.replaceState) {
 			interceptHashLinks();
 
 			if (currentHash !== '') {
@@ -18,14 +17,40 @@
 
 			window.history.replaceState({hash: currentHash}, null, currentHash);
 
-			window.addEventListener('popstate', onPopState);
+			if (window.addEventListener) {
+				window.addEventListener('popstate', onPopState);
+			} else {
+				// Improbably combination of browser features
+				window.attachEvent('popstate', onPopState);
+			}
 		}
 
-		window.addEventListener('languagechange', update);
-		window.addEventListener('hashchange', onHashChange);
+		if (window.addEventListener) {
+			window.addEventListener('languagechange', update);
+			window.addEventListener('hashchange', onHashChange);
+		} else {
+			window.attachEvent('languagechange', update);
+			window.attachEvent('hashchange', onHashChange);
+		}
 		
 		updateAndJump();
 		isHashChanging = false;
+	}
+
+	/**
+	 * Translate former ISO 639 tags to modern ones.
+	 * 
+	 * BCP 47 supports both old and new tags but prefers the newer tags.  We exclusively use new tags in our code, so we
+	 * need to translate from old to new.
+	 */
+	function normalizeLangs(code) {
+		var aliases = {
+			iw: 'he',  // Changed in 1989
+			ji: 'yi',  // Changed in 1989
+			in: 'id',  // Changed in 1989
+		};
+
+		return aliases.hasOwnProperty(code) ? aliases[code] : code;
 	}
 	
 	function toRootLangs(supportedLangs, langs) {
@@ -41,7 +66,7 @@
 			var tok = lang.split(/[-_]/);
 			var dialects = [];
 
-			tok[0] = tok[0].toLowerCase();
+			tok[0] = normalizeLangs(tok[0].toLowerCase());
 
 			switch (tok.length) {
 				case 2:
@@ -50,7 +75,7 @@
 					break;
 
 				case 3:
-					tok[1] = tok[1].length === 0 ? '' : tok[1][0].toUpperCase() + tok[1].substr(1).toLowerCase();
+					tok[1] = tok[1].length === 0 ? '' : tok[1][0].toUpperCase() + tok[1].substring(1).toLowerCase();
 					tok[2] = tok[2].toUpperCase();
 					dialects.push(tok[0] + '-' + tok[1] + '-' + tok[2]);
 					dialects.push(tok[0] + '-' + tok[1]);
@@ -83,12 +108,11 @@
 	function getPreferredLangs(supportedLangs) {
 		var i;
 		var langs = getBrowserLangs(supportedLangs);
-
 		var hash = currentHash;
-		console.debug("Preferred hash: " + hash);
+
 		if (hash !== '') {
 			if (hash[0] === '#') {
-				hash = hash.substr(1);
+				hash = hash.substring(1);
 			}
 
 			var tok = hash.split('--');
@@ -96,9 +120,6 @@
 
 			if (supportedLangs.indexOf(hash) >= 0) {
 				langs.unshift(hash);
-			} else {
-				console.warn("Preferred language doesn't exist: " + hash);
-				console.warn("Supported languages: " + supportedLangs.join(','))
 			}
 		}
 		
@@ -111,8 +132,6 @@
 		}
 		langs = deduped;
 
-		console.debug("Preferred langs: " + langs.join(", "));
-
 		return langs;
 	};
 
@@ -121,8 +140,8 @@
 		var parent = document.getElementById('questions');
 		var i;
 
-		var separator = document.getElementById('lang-list');
-		var langDivs = document.getElementsByClassName('lang');
+		var separator = document.getElementById('langs-list');
+		var langDivs = document.getElementsByClassName('single-lang');
 
 		var supportedLangs = [];
 		for (i = 0; i < langDivs.length; i++) {
@@ -135,6 +154,8 @@
 
 		var preferredLangs = getPreferredLangs(supportedLangs);
 
+		parent.setAttribute('aria-busy', 'true');
+
 		if (parent.children[0] !== separator) {
 			parent.removeChild(separator);
 			parent.insertBefore(separator, parent.children[0]);
@@ -145,9 +166,9 @@
 			var el = parent.removeChild(document.getElementById(lang));
 			parent.insertBefore(el, separator);
 		}
-	};
 
-	var oldClassName = null;
+		parent.setAttribute('aria-busy', 'false');
+	};
 
 	function addClassName(el, className) {
 		if (el.className !== '' && el.className !== null && el.className !== undefined) {
@@ -178,15 +199,26 @@
 
 		var hash = currentHash || '';
 		if (hash !== '' && hash[0] === '#') {
-			hash = hash.substr(1);
+			hash = hash.substring(1);
 
 			var el = window.document.getElementById(hash);
 			if (el) {
 				addClassName(el, 'highlighted');
 
 				if (el.scrollIntoView) {
-					console.log("Scrolling into view: " + hash);
-					el.scrollIntoView();
+					if (el.scrollIntoView) {
+						el.scrollIntoView();
+					}
+
+					var focusable = el;
+
+					while (focusable && !focusable.hasAttribute('tabindex') || focusable.getAttribute('tabindex') === '') {
+						focusable = focusable.parentNode || null;
+					}
+
+					if (focusable && focusable.focus) {
+						focusable.focus();
+					}
 				}
 			}
 		}
@@ -198,7 +230,6 @@
 
 		if (!hash || hash[0] !== '#') {
 			// Logical error; non-standard, unsupported browser behavior
-			console.error("Logical error: " + target);
 			return;
 		}
 
@@ -223,18 +254,12 @@
 	}
 
 	function onPopState(event) {
-		if (isHashChanging) {
-			console.debug("popstate: Hash is changing");
-			return;
-		}
-		if (!event.state) {
-			console.debug("popstate: On page load");
+		if (isHashChanging || !event.state) {
 			return;
 		}
 		isHashChanging = true;
 
 		currentHash = event.state.hash || '';
-		console.log("Normal: " + currentHash);
 
 		updateAndJump();
 		isHashChanging = false;
@@ -247,7 +272,6 @@
 		isHashChanging = true;
 
 		currentHash = window.location.hash;
-		console.log("Overriding: " + currentHash);
 
 		if (window.history.replaceState) {
 			window.history.replaceState({hash: currentHash}, null, currentHash);

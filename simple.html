@@ -1,0 +1,33 @@
+---
+title: Telegram Help
+---
+<!DOCTYPE html>
+<!-- multilingual class: https://en.wikipedia.org/wiki/ISO_639#Delimiting_languages -->
+<html dir="ltr" class="multilingual" lang="">
+	<head>
+		<meta charset="utf-8">
+		<title lang="en">{{ page.title }}</title>
+		<link rel="stylesheet" href="css/simple.css">
+		<meta name="google" content="notranslate">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+        <main>
+            {% for lang in site.data.i18n.langs %}
+                <details id="{{ lang.key }}" class="lang-{{ lang.key }}" dir="ltr" lang="{{ lang.key }}">
+                    <summary id="h-{{ lang.key }}" role="heading" aria-level="1">
+                        <bdo dir="{{ lang.dir }}">{{ lang.localized }}</bdo>
+                    </summary>
+                    <div>
+                        {% for faq in site.data.i18n.faqs %}
+                            <details dir="{{ lang.dir }}" open>
+                                <summary>{{ faq.question[lang.key] }}</summary>
+                                <div>{{ faq.answer[lang.key] }}</div>
+                            </details>
+                        {% endfor %}
+                    </div>
+                </details>
+            {% endfor %}
+        </main>
+	</body>
+</html>

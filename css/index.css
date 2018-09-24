@@ -25,7 +25,7 @@ dt, h1 {
 }
 dt { font-size: 1.2em; margin-top: .8em; }
 h1 { font-size: 1.6em; }
-.lang:not(:first-of-type) { margin-top: 2em; }
+.single-lang:not(:first-of-type) { margin-top: 2em; }
 
 a.permalink {
 	text-decoration: none;
@@ -38,35 +38,36 @@ a.permalink {
 		color: #777;
 	}
 
-#lang-list {
+#langs-list {
 	border: none;
 	border-top: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
 	margin: 1.5em 0 2em;
 	padding: 2em 0;
 }
-	#lang-list:first-child {
+	#langs-list:first-child {
 		border-top: none;
 	}
-	#lang-list:last-child {
+	#langs-list:last-child {
 		border-bottom: none;
 	}
 
-	#lang-list ul {
+	#langs-list ul {
 		margin: 1.2em 0 0 0;
 		padding: 0 0 0 2.5em;
 	}
 
-	#lang-list h1 {
+	#langs-list h1 {
 		margin: 0;
 		padding: 0;
 	}
 
-#lang-list + .lang h1 {
+#langs-list + .lang h1 {
 	padding-top: 0;
 }
 
-.highlighted,
+.single-lang.highlighted,
+.question.highlighted,
 .question.highlighted + .answer {
 	background-color: #eef4ff;
 }

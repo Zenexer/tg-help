@@ -1,35 +1,48 @@
 ---
-layout: faq
 title: Telegram Help
 ---
-<div id="questions">
-	<div id="lang-list">
-		<h1>Languages</h1>
-		<ul>
-			{% for lang in site.data.i18n.langs %}
-				<li><a href="#{{ lang.key }}" class="lang-localized"><bdo dir="{{ lang.dir }}">{{ lang.localized }}</bdo> <span class="lang-name">({{ lang.name }})</span></a></li>
-			{% endfor %}
-		</ul>
-	</div>
+<!DOCTYPE html>
+<!-- multilingual class: https://en.wikipedia.org/wiki/ISO_639#Delimiting_languages -->
+<html dir="ltr" class="multilingual" lang="">
+	<head>
+		<meta charset="utf-8">
+		<title lang="en">{{ page.title }}</title>
+		<link rel="stylesheet" href="css/index.css">
+		<meta name="google" content="notranslate">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		<main id="questions" role="feed" aria-live="off" aria-atomic="false" aria-relevant="additions">
+			<nav id="langs-list" aria-labelledby="nav-header" tabindex="0">
+				<h1 id="nav-header" role="heading" aria-level="1" class="lang-en" lang="en">Languages</h1>
+				<ul>
+					{% for lang in site.data.i18n.langs %}
+						<li><a href="#{{ lang.key }}" hreflang="{{ lang.key }}" class="localized-name lang-{{ lang.key }}" tabindex="0"><bdo dir="{{ lang.dir }}" lang="{{ lang.key }}">{{ lang.localized }}</bdo> <span class="english-name">({{ lang.name }})</span></a></li>
+					{% endfor %}
+				</ul>
+			</nav>
 
-	{% for lang in site.data.i18n.langs %}
-		<div id="{{ lang.key }}" class="lang" lang="{{ lang.key }}">
-			<h1>
-				<span class="lang-localized" dir="{{ lang.dir }}">{{ lang.localized }}</span>
-				{% if lang.localized != lang.name %}
-					<span class="lang-name" dir="ltr">({{ lang.name }})</span>
-				{% endif %}
-				<a class="permalink" href="#{{ lang.key }}">#<bdo dir="ltr">{{ lang.key }}</bdo></a>
-			</h1>
-			<dl class="faq-list" dir="{{ lang.dir }}">
-				{% for faq in site.data.i18n.faqs %}
-					<dt id="{{ faq.key }}--{{ lang.key }}" class="question">
-						<span class="question-text">{{ faq.question[lang.key] }}</span>
-						<a class="permalink" href="#{{ faq.key }}--{{ lang.key }}">#<bdo dir="ltr">{{ faq.key }}--{{ lang.key }}</bdo></a>
-					</dt>
-					<dd class="answer">{{ faq.answer[lang.key] }}</dd>
-				{% endfor %}
-			</dl>
-		</div>
-	{% endfor %}
-</div>
+			{% for lang in site.data.i18n.langs %}
+				<article id="{{ lang.key }}" role="article" tabindex="0" class="single-lang lang-{{ lang.key }}" lang="{{ lang.key }}" aria-labelledby="h-{{ lang.key }}">
+					<h1 id="h-{{ lang.key }}" role="heading" aria-level="1">
+						<span class="localized-name" dir="{{ lang.dir }}">{{ lang.localized }}</span>
+						{% if lang.localized != lang.name %}
+							<bdo class="english-name" dir="ltr" lang="en">({{ lang.name }})</bdo>
+						{% endif %}
+						<a class="permalink" href="#{{ lang.key }}" hreflang="{{ lang.key }}" lang="en" class="lang-en" dir="ltr">Permalink</a>
+					</h1>
+					<dl class="faq-list" dir="{{ lang.dir }}">
+						{% for faq in site.data.i18n.faqs %}
+							<dt id="{{ faq.key }}--{{ lang.key }}" class="question" role="heading" aria-level="2">
+								<span class="question-text">{{ faq.question[lang.key] }}</span>
+								<a class="permalink" href="#{{ faq.key }}--{{ lang.key }}" hreflang="{{ lang.key }}" id="h-{{ faq.key }}--{{ lang.key }}" lang="en" class="lang-en" dir="ltr">Permalink</a>
+							</dt>
+							<dd class="answer" role="region" aria-labelledby="h-{{ faq.key }}--{{ lang.key }}">{{ faq.answer[lang.key] }}</dd>
+						{% endfor %}
+					</dl>
+				</article>
+			{% endfor %}
+		</main>
+		<script src="js/faq.js"></script>
+	</body>
+</html>

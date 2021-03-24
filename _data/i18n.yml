@@ -120,6 +120,10 @@ langs:
     name: Bulgarian
     localized: български език
     dir: ltr
+  - key: fa
+    name: Farsi (Persian)
+    localized: فارسی
+    dir: rtl
 faqs:
   - key: crypt
     question:
@@ -140,6 +144,7 @@ faqs:
       ml: "എനിക്ക് എങ്ങനെ പണം പിന്‍വലിക്കാനാവും?"
       he: "כיצד אני מושך/ת כסף?"
       te: "నేను నగదుని ఎలా విత్‌డ్రా చేయాలి?"
+      fa: "چگونه می توانم پول برداشت کنم؟"
       sw: "Nitatoa vipi pesa?"
       so: "Sidee baan uga bixi karaa lacagtayda?"
       am: "ገንዘብ እንዴት አወጣለሁ?"
@@ -162,6 +167,8 @@ faqs:
       ml: "നിങ്ങള്‍ക്ക് Telegram-ല്‍ സൗജന്യമായി പണം സമ്പാദിക്കാനാവില്ല. Telegram ഒരു ക്രിപ്റ്റോകറന്‍സി പ്രോഗ്രാം അല്ല. അതില്‍ നിങ്ങള്‍ക്ക് പണം പിന്‍വലിക്കാന്‍ സാധിക്കില്ല. ഒരു ബോട്ട് നിങ്ങള്‍ക്ക് പണം സൗജന്യമായി നല്‍കാമെന്ന് വാഗ്ദാനം ചെയ്താല്‍ അത് കബളിപ്പിക്കലായിരിക്കും."
       he: "אינך יכול/ה להרוויח כסף בחינם בטלגרם. טלגרם היא אינה תוכנת מטבע מבוזר (מטבע וירטואלי). אינך יכול/ה למשוך כסף. במידה ובוט  (חשבון אוטומטי) מציע לך כסף בחינם, זו תרמית."
       te: "మీరు టెలిగ్రామ్‌లో ఉచిత నగదుని ఆర్జించలేరు. టెలిగ్రామ్ ఒక క్రిప్టోకరెన్సీ ప్రోగ్రామ్ కాదు. మీరు నగదుని విత్‌డ్రా చేయలేరు. ఒకవేళ మీకు ఉచిత నగదు ఇవ్వాలని ఒక బోట్ అంటే, అప్పుడు అది ఒక స్కామ్ అవుతుంది."
+      fa: ".شما نمیتوانید پولی در تلگرام کسب کنید. تلگرام یک برنامه رمزارز نیست. شما نمی توانید پول برداشت کنید. اگر یک ربات ادعا کند که پول رایگان به شما می دهد، این یک کلاهبرداری است"
       sw: "Huwezi kupata pesa za bwerere kupitia kwa Telegram. Telegram sio programu ya sarafu za mtandaoni. Huwezi kutoa pesa. Iwapo roboti ya kiteknolojia inadai kukupatia pesa za bwerere, bila shaka huo utakuwa ni ulaghai."
       so: "Waxaad ma heli karo lacag la'aan ah telegraam. Telegram ma aha barnaamijka cryptocurrency. Lama qaadan kartid lacag. Haddii mashiinku sheeganayo inuu ku siinayo lacag lacag la'aan ah, ka dibna waa beenaal been ah."
       am: "ቴሌግራም ላይ ነጻ ገንዘብ ማግኘት አይችሉም። ቴሌግራም አህዛዊ የገንዘብ ምስጠራ መርሃግብር አይደለም። ገንዘብ ማውጣት አይችሉም። የኮምፕዩተር መርሃግብር ነጻ ገንዘብ እንደሚሰጥዎ ካረጋገጠ፣ ይህ ማጭበርበር ነው።"
+      

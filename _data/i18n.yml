@@ -136,6 +136,10 @@ langs:
     name: Farsi (Persian)
     localized: فارسی
     dir: rtl
+  - key: ru
+    name: Russian
+    localized: Русский язык
+    dir: ltr
 faqs:
   - key: crypt
     question:
@@ -163,6 +167,7 @@ faqs:
       ckb: "چۆن پارەم دەستدەکەوێت؟"
       lt: "Kaip man išimti pinigus?"
       no: "Hvordan trekker jeg ut penger?"
+      ru: "Как мне вывести деньги?"
 
     answer:
       en: "You can't earn free money on Telegram. Telegram isn't a cryptocurrency program. You can't withdraw money. If a bot claims to give you free money, then it is a scam."
@@ -189,3 +194,4 @@ faqs:
       ckb: "ناتوانیت پارەی خۆرایی لە تەلەگرام پەیدابکەیت. تەلەگرام بەرنامەیەکی دراوی ئەلیکترۆنی نییە. ئەگەر بۆتێکت پارەی خۆراییت بۆ پەیدابکات، نایاساییە."
       lt: "Jūs negalite uždirbti pinigų per Telegram. Telegram nėra kriptovalutos programa. Jūs negalite išimti pinigų. Jei botas teigia, kad jums suteiks nemokamus pinigus, tai yra apgaulė."
       no: "Du kan ikke tjene gratis penger på Telegram. Telegram er ikke et cryptocurrency program. Du kan ikke trekke ut penger. Hvis en bot hevder å gi deg gratis penger, så er det en svindel."
+      ru: "В Telegram нельзя получить деньги просто так. Telegram не является программой для работы с криптовалютами. Вы не можете вывести деньги. Если бот предлагает вам деньги просто так - это мошенничество."
